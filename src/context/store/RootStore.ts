@@ -10,9 +10,9 @@ class RootStore {
     accountStore: AccountStore;
 
     constructor() {
+        this.accountStore = new AccountStore(this);
         this.calcStore = new CalcStore(this);
         this.mintStore = new MintStore(this);
-        this.accountStore = new AccountStore(this);
         makeAutoObservable(this);
     }
 
